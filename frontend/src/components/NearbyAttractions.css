@@ -1,0 +1,343 @@
+/* ==================================================
+   NEARBY ATTRACTIONS
+================================================== */
+
+.nearby{
+
+    padding:110px 8%;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #f8fbff
+    );
+
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.nearby-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.nearby-header h2{
+
+    font-size:52px;
+
+    font-weight:800;
+
+    color:#0F172A;
+
+    margin-bottom:18px;
+
+}
+
+.nearby-header p{
+
+    font-size:20px;
+
+    color:#64748B;
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* ==================================================
+   GRID
+================================================== */
+
+.nearby-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:38px;
+
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.nearby-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(15,23,42,.08);
+
+    transition:.4s ease;
+
+    cursor:pointer;
+
+}
+
+.nearby-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 30px 60px rgba(37,99,235,.20);
+
+}
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.nearby-card{
+
+    overflow:hidden;
+
+}
+
+.nearby-card img{
+
+    width:100%;
+
+    height:270px;
+
+    object-fit:cover;
+
+    transition:.6s ease;
+
+}
+
+.nearby-card:hover img{
+
+    transform:scale(1.10);
+
+}
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.nearby-content{
+
+    padding:28px;
+
+}
+
+/* ==================================================
+   TITLE & RATING
+================================================== */
+
+.nearby-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.nearby-top h3{
+
+    font-size:28px;
+
+    color:#0F172A;
+
+    font-weight:700;
+
+}
+
+.nearby-top span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    background:#FEF3C7;
+
+    color:#D97706;
+
+    padding:7px 12px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    font-size:15px;
+
+}
+
+/* ==================================================
+   LOCATION
+================================================== */
+
+.nearby-content p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#64748B;
+
+    font-size:17px;
+
+    margin-bottom:28px;
+
+}
+
+.nearby-content svg{
+
+    color:#2563EB;
+
+    font-size:18px;
+
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.nearby-content button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    background:#2563EB;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+.nearby-content button:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:992px){
+
+.nearby{
+
+padding:90px 7%;
+
+}
+
+.nearby-header h2{
+
+font-size:44px;
+
+}
+
+.nearby-header p{
+
+font-size:18px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.nearby{
+
+padding:80px 6%;
+
+}
+
+.nearby-header{
+
+margin-bottom:45px;
+
+}
+
+.nearby-header h2{
+
+font-size:36px;
+
+}
+
+.nearby-header p{
+
+font-size:16px;
+
+line-height:1.7;
+
+}
+
+.nearby-grid{
+
+grid-template-columns:1fr;
+
+gap:30px;
+
+}
+
+.nearby-card img{
+
+height:220px;
+
+}
+
+.nearby-content{
+
+padding:22px;
+
+}
+
+.nearby-top h3{
+
+font-size:24px;
+
+}
+
+.nearby-content p{
+
+font-size:15px;
+
+}
+
+.nearby-content button{
+
+font-size:16px;
+
+padding:15px;
+
+}
+
+}

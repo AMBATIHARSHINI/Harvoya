@@ -1,0 +1,390 @@
+/* ==========================================
+   RECEIPT PAGE
+========================================== */
+
+.receipt-page{
+    min-height:100vh;
+    background:#f5f7fb;
+    padding:70px 6%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+/* ==========================================
+   RECEIPT CARD
+========================================== */
+
+.receipt-card{
+    width:100%;
+    max-width:900px;
+    background:#fff;
+    border-radius:25px;
+    padding:45px;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.receipt-header{
+    text-align:center;
+    margin-bottom:35px;
+    border-bottom:2px dashed #dbe3ec;
+    padding-bottom:25px;
+}
+
+.receipt-header h1{
+    font-size:44px;
+    color:#2563eb;
+    letter-spacing:2px;
+    font-weight:800;
+}
+
+.receipt-header h2{
+    margin-top:10px;
+    color:#0f172a;
+    font-size:30px;
+}
+
+.receipt-header p{
+    margin-top:10px;
+    color:#64748b;
+    font-size:17px;
+}
+
+/* ==========================================
+   BOOKING ID
+========================================== */
+
+.receipt-booking-id{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.receipt-booking-id span{
+    color:#64748b;
+    font-size:15px;
+}
+
+.receipt-booking-id h3{
+    margin-top:10px;
+    color:#16a34a;
+    font-size:28px;
+    letter-spacing:1px;
+}
+
+/* ==========================================
+   HOTEL
+========================================== */
+
+.receipt-hotel{
+    display:flex;
+    gap:25px;
+    align-items:center;
+    background:#f8fafc;
+    padding:20px;
+    border-radius:18px;
+    margin-bottom:35px;
+}
+
+.receipt-hotel img{
+    width:220px;
+    height:150px;
+    border-radius:15px;
+    object-fit:cover;
+}
+
+.receipt-hotel h2{
+    color:#0f172a;
+    margin-bottom:10px;
+    font-size:30px;
+}
+
+.receipt-hotel p{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#64748b;
+    font-size:17px;
+}
+
+/* ==========================================
+   DETAILS GRID
+========================================== */
+
+.receipt-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.receipt-item{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    background:#f8fafc;
+    border-radius:16px;
+    padding:18px;
+    transition:.3s;
+}
+
+.receipt-item:hover{
+    transform:translateY(-3px);
+    background:#eef4ff;
+}
+
+.receipt-item svg{
+    font-size:28px;
+    color:#2563eb;
+}
+
+.receipt-item span{
+    display:block;
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.receipt-item h4{
+    color:#0f172a;
+    font-size:18px;
+}
+
+.confirmed{
+    color:#16a34a !important;
+}
+
+.total-paid{
+
+    background:#2563eb;
+
+    padding:12px !important;
+
+}
+
+.total-paid svg,
+.total-paid span,
+.total-paid h2{
+    color:white;
+}
+
+.total-paid h2{
+    font-size:32px;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.receipt-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.download-btn,
+.back-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    padding:16px 30px;
+    border-radius:14px;
+    font-size:17px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.download-btn{
+    background:#2563eb;
+    color:#fff;
+}
+
+.download-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.back-btn{
+    background:#16a34a;
+    color:#fff;
+}
+
+.back-btn:hover{
+    background:#15803d;
+    transform:translateY(-3px);
+}
+
+/* ==========================================
+   ERROR PAGE
+========================================== */
+
+.receipt-error{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+}
+
+.receipt-error h1{
+    font-size:38px;
+    color:#dc2626;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.receipt-card{
+    padding:30px;
+}
+
+.receipt-grid{
+    grid-template-columns:1fr;
+}
+
+.receipt-hotel{
+    flex-direction:column;
+    text-align:center;
+}
+
+.receipt-hotel img{
+    width:100%;
+    height:230px;
+}
+
+}
+
+@media(max-width:600px){
+
+.receipt-page{
+    padding:40px 5%;
+}
+
+.receipt-header h1{
+    font-size:34px;
+}
+
+.receipt-header h2{
+    font-size:24px;
+}
+
+.receipt-buttons{
+    flex-direction:column;
+}
+
+.download-btn,
+.back-btn{
+    width:100%;
+}
+
+}
+@media print {
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body {
+    background: white;
+  }
+
+  .receipt-page {
+    padding: 0;
+    margin: 0;
+    background: white;
+  }
+
+  .receipt-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .receipt-header h1 {
+    font-size: 34px;
+  }
+
+  .receipt-header h2 {
+    font-size: 24px;
+  }
+
+  .receipt-header p {
+    font-size: 14px;
+  }
+
+  .receipt-booking-id {
+    margin: 15px 0;
+  }
+
+  .receipt-hotel {
+    margin-bottom: 15px;
+    padding: 12px;
+  }
+
+  .receipt-hotel img {
+    width: 170px;
+    height: 110px;
+  }
+
+  .receipt-grid{
+
+    gap:4px !important;
+
+}
+
+.receipt-item{
+
+    padding:8px !important;
+
+}
+  .receipt-item h4 {
+    font-size: 15px;
+  }
+
+  .receipt-item span {
+    font-size: 12px;
+  }
+
+  .total-paid h2 {
+    font-size: 24px;
+  }
+
+  .receipt-buttons {
+    display: none;
+  }
+  .total-paid{
+
+    padding:8px !important;
+
+}
+
+.total-paid h2{
+
+    font-size:22px !important;
+
+    margin:0;
+
+}
+
+.total-paid span{
+
+    font-size:12px;
+
+}
+}

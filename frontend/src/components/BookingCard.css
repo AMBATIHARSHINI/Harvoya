@@ -1,0 +1,543 @@
+/* ==================================================
+   BOOKING SECTION
+================================================== */
+
+.booking-section{
+
+    max-width:1200px;
+
+    margin:110px auto;
+
+    padding:0 8%;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #f8fbff
+    );
+
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.booking-card{
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:0 20px 50px rgba(15,23,42,.08);
+
+    transition:.4s ease;
+
+    overflow:hidden;
+
+}
+
+.booking-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 35px 70px rgba(37,99,235,.18);
+
+}
+
+.booking-card h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#0F172A;
+
+    margin-bottom:40px;
+
+}
+
+/* ==================================================
+   INPUTS
+================================================== */
+
+.booking-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:26px;
+
+}
+
+.booking-field label{
+
+    margin-bottom:10px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#334155;
+
+}
+
+.booking-field input{
+
+    width:100%;
+
+    padding:17px 18px;
+
+    border:1px solid #CBD5E1;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    background:white;
+
+    transition:.35s ease;
+
+    outline:none;
+
+}
+
+.booking-field input:hover{
+
+    border-color:#93C5FD;
+
+}
+
+.booking-field input:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 5px rgba(37,99,235,.12);
+
+}
+
+/* ==================================================
+   PROMO CODE
+================================================== */
+
+.promo-box{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+
+}
+
+.promo-box input{
+
+    flex:1;
+
+}
+
+.apply-btn{
+
+    padding:17px 24px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#2563EB;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.apply-btn:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+
+}
+
+/* ==================================================
+   COUNTERS
+================================================== */
+
+.booking-counter{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.booking-counter label{
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#334155;
+
+}
+
+.booking-counter div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.booking-counter button{
+
+    width:44px;
+
+    height:44px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+.booking-counter button:hover{
+
+    background:#2563EB;
+
+    color:white;
+
+    transform:scale(1.08);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+}
+
+.booking-counter span{
+
+    min-width:24px;
+
+    text-align:center;
+
+    font-size:21px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+}
+
+/* ==================================================
+   PRICE SUMMARY
+================================================== */
+
+.price-summary{
+
+    margin-top:35px;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        180deg,
+        #F8FAFC,
+        #F1F5F9
+    );
+
+    border:1px solid #E2E8F0;
+
+}
+
+.price-summary div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    font-size:17px;
+
+    color:#475569;
+
+}
+
+.price-summary hr{
+
+    border:none;
+
+    border-top:1px dashed #CBD5E1;
+
+    margin:22px 0;
+
+}
+
+.total{
+
+    font-size:24px !important;
+
+    font-weight:800;
+
+    color:#0F172A !important;
+
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.reserve-btn{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #1D4ED8
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+.reserve-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.35);
+
+}
+
+/* ==================================================
+   TRUST BADGES
+================================================== */
+
+.booking-features{
+
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
+}
+
+.booking-feature{
+
+    background:linear-gradient(
+        135deg,
+        #EFF6FF,
+        #DBEAFE
+    );
+
+    color:#2563EB;
+
+    padding:16px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.booking-feature:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.18);
+
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:992px){
+
+.booking-section{
+
+padding:0 7%;
+
+}
+
+.booking-card{
+
+padding:36px;
+
+}
+
+.booking-features{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.booking-section{
+
+padding:0 6%;
+
+margin:80px auto;
+
+}
+
+.booking-card{
+
+padding:26px;
+
+border-radius:22px;
+
+}
+
+.booking-card h2{
+
+font-size:32px;
+
+margin-bottom:28px;
+
+}
+
+.booking-counter{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:14px;
+
+}
+
+.booking-counter div{
+
+width:100%;
+
+justify-content:flex-end;
+
+}
+
+.booking-field input{
+
+padding:15px;
+
+}
+
+.promo-box{
+
+flex-direction:column;
+
+}
+
+.apply-btn{
+
+width:100%;
+
+padding:15px;
+
+}
+
+.price-summary{
+
+padding:22px;
+
+}
+
+.price-summary div{
+
+font-size:15px;
+
+}
+
+.total{
+
+font-size:20px !important;
+
+}
+
+.booking-features{
+
+grid-template-columns:1fr;
+
+gap:12px;
+
+}
+
+.booking-feature{
+
+font-size:13px;
+
+padding:12px;
+
+}
+
+.reserve-btn{
+
+padding:16px;
+
+font-size:17px;
+
+}
+
+}

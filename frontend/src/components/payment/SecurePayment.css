@@ -1,0 +1,41 @@
+.secure-payment{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:#ECFDF5;
+
+    border:1px solid #BBF7D0;
+
+    padding:22px;
+
+    border-radius:18px;
+
+}
+
+.secure-payment svg{
+
+    font-size:42px;
+
+    color:#22C55E;
+
+}
+
+.secure-payment h3{
+
+    color:#065F46;
+
+    margin-bottom:5px;
+
+}
+
+.secure-payment p{
+
+    color:#047857;
+
+    line-height:1.6;
+
+}

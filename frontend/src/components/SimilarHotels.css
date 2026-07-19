@@ -1,0 +1,341 @@
+/* ==================================================
+   SIMILAR HOTELS
+================================================== */
+
+.similar-hotels{
+
+    padding:110px 8%;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #f8fbff
+    );
+
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.similar-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.similar-header h2{
+
+    font-size:52px;
+
+    font-weight:800;
+
+    color:#0F172A;
+
+    margin-bottom:15px;
+
+}
+
+.similar-header p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#64748B;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+/* ==================================================
+   GRID
+================================================== */
+
+.similar-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.similar-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+
+    transition:.4s ease;
+
+}
+
+.similar-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 30px 60px rgba(37,99,235,.20);
+
+}
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.similar-card{
+
+    overflow:hidden;
+
+}
+
+.similar-card img{
+
+    width:100%;
+
+    height:270px;
+
+    object-fit:cover;
+
+    transition:.5s ease;
+
+}
+
+.similar-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.similar-content{
+
+    padding:28px;
+
+}
+
+.similar-content h3{
+
+    font-size:28px;
+
+    color:#0F172A;
+
+    margin-bottom:14px;
+
+    font-weight:700;
+
+}
+
+.similar-content p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#64748B;
+
+    margin-bottom:22px;
+
+    font-size:17px;
+
+}
+
+.similar-content p svg{
+
+    color:#2563EB;
+
+}
+
+/* ==================================================
+   PRICE & RATING
+================================================== */
+
+.similar-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.similar-bottom span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    background:#FEF3C7;
+
+    color:#D97706;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+}
+
+.similar-bottom h4{
+
+    color:#2563EB;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.similar-bottom small{
+
+    color:#64748B;
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.similar-btn{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #1D4ED8
+    );
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:15px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.35s ease;
+
+}
+
+.similar-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:992px){
+
+.similar-hotels{
+
+padding:90px 7%;
+
+}
+
+.similar-header h2{
+
+font-size:44px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.similar-hotels{
+
+padding:80px 6%;
+
+}
+
+.similar-header{
+
+margin-bottom:45px;
+
+}
+
+.similar-header h2{
+
+font-size:34px;
+
+}
+
+.similar-header p{
+
+font-size:16px;
+
+}
+
+.similar-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.similar-card img{
+
+height:220px;
+
+}
+
+.similar-content{
+
+padding:22px;
+
+}
+
+.similar-content h3{
+
+font-size:24px;
+
+}
+
+.similar-bottom h4{
+
+font-size:24px;
+
+}
+
+}

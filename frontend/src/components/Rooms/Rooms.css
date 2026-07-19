@@ -1,0 +1,160 @@
+/* ===========================
+   ROOMS
+=========================== */
+
+.rooms{
+    padding:100px 8%;
+    background:#f8fbff;
+}
+
+.rooms-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.rooms-header h2{
+    font-size:48px;
+    color:#0F172A;
+    margin-bottom:15px;
+}
+
+.rooms-header p{
+    color:#64748B;
+    font-size:18px;
+}
+
+.rooms-container{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* ===========================
+   ROOM CARD
+=========================== */
+
+.room-card{
+    background:white;
+    border-radius:24px;
+    padding:35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.room-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(37,99,235,.18);
+}
+
+.room-left h3{
+    font-size:30px;
+    color:#0F172A;
+    margin-bottom:20px;
+}
+
+.room-features{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-bottom:18px;
+}
+
+.room-features span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#EFF6FF;
+    color:#2563EB;
+    padding:10px 16px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:600;
+}
+
+.room-view{
+    color:#475569;
+    font-size:17px;
+}
+
+.room-right{
+    text-align:right;
+}
+
+.room-right small{
+    color:#94A3B8;
+    display:block;
+    margin-bottom:8px;
+}
+
+.room-right h2{
+    font-size:42px;
+    color:#2563EB;
+}
+
+.room-right span{
+    display:block;
+    color:#64748B;
+    margin-bottom:20px;
+}
+
+.room-right button{
+    background:#2563EB;
+    color:white;
+    border:none;
+    padding:16px 32px;
+    border-radius:14px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.room-right button:hover{
+    background:#1D4ED8;
+    transform:translateY(-3px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.room-card{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:30px;
+}
+
+.room-right{
+    text-align:left;
+}
+
+}
+
+@media(max-width:768px){
+
+.rooms{
+    padding:80px 6%;
+}
+
+.rooms-header h2{
+    font-size:36px;
+}
+
+.room-left h3{
+    font-size:24px;
+}
+
+.room-right h2{
+    font-size:34px;
+}
+
+.room-right button{
+    width:100%;
+}
+
+}

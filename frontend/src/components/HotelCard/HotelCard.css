@@ -1,0 +1,409 @@
+/* ===========================
+   HOTEL CARD
+=========================== */
+
+.hotel-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s ease;
+
+    cursor:pointer;
+
+}
+
+.hotel-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 55px rgba(37,99,235,.18);
+
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.hotel-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hotel-image img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.hotel-card:hover .hotel-image img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   RATING
+=========================== */
+
+.hotel-rating{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:8px 14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-weight:600;
+
+    font-size:14px;
+
+    color:#0F172A;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+
+}
+
+.hotel-rating svg{
+
+    color:#FBBF24;
+
+}
+
+/* ===========================
+   WISHLIST
+=========================== */
+
+.wishlist{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#9CA3AF;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+
+}
+
+.hotel-card:hover .wishlist{
+
+    transform:scale(1.12);
+
+}
+
+.wishlist:hover{
+
+    background:#FEE2E2;
+
+}
+
+.wishlist.active{
+
+    color:#EF4444;
+
+    background:#FEE2E2;
+
+    animation:heartPop .35s ease;
+
+}
+
+@keyframes heartPop{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.35);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.hotel-content{
+
+    padding:25px;
+
+}
+
+.hotel-content h3{
+
+    color:#0F172A;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   LOCATION
+=========================== */
+
+.location{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#64748B;
+
+    margin-bottom:15px;
+
+    font-size:15px;
+
+}
+
+.location svg{
+
+    color:#2563EB;
+
+}
+
+/* ===========================
+   HOTEL TYPE
+=========================== */
+
+.hotel-type{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.hotel-features{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:25px;
+
+}
+
+.hotel-features span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:14px;
+
+    color:#475569;
+
+}
+
+.hotel-features svg{
+
+    color:#2563EB;
+
+}
+
+/* ===========================
+   PRICE
+=========================== */
+
+.hotel-bottom{
+
+    margin-top:10px;
+
+}
+
+.price small{
+
+    color:#94A3B8;
+
+    display:block;
+
+    font-size:13px;
+
+    margin-bottom:5px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+}
+
+.price h2{
+
+    font-size:30px;
+
+    color:#2563EB;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+}
+
+.per-night{
+
+    color:#64748B;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.hotel-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    height:55px;
+
+    border-radius:14px;
+
+    background:#2563EB;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.hotel-btn:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.hotel-content{
+
+padding:20px;
+
+}
+
+.hotel-content h3{
+
+font-size:22px;
+
+}
+
+.price h2{
+
+font-size:26px;
+
+}
+
+.hotel-btn{
+
+height:50px;
+
+font-size:16px;
+
+}
+
+}

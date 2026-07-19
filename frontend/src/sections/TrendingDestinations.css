@@ -1,0 +1,65 @@
+.trending{
+
+    padding:120px 8%;
+
+    background:#F8FAFC;
+
+}
+
+.trending h2{
+
+    text-align:center;
+
+    font-size:52px;
+
+    color:#0F172A;
+
+    margin-bottom:18px;
+
+}
+
+.trending p{
+
+    text-align:center;
+
+    color:#64748B;
+
+    font-size:20px;
+
+    max-width:700px;
+
+    margin:0 auto 70px;
+
+    line-height:1.7;
+
+}
+
+.destination-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+}
+
+@media(max-width:992px){
+
+.destination-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.destination-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
