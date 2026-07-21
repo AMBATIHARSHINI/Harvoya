@@ -6,7 +6,7 @@ import {
   FaMapMarkerAlt,
   FaHeart,
   FaChevronLeft,
-  FaChevronRight
+  FaChevronRight,
 } from "react-icons/fa";
 
 import hotelDetails from "../data/hotelDetails";
@@ -15,23 +15,30 @@ import Rooms from "../components/Rooms/Rooms";
 import NearbyAttractions from "../components/NearbyAttractions";
 import BookingCard from "../components/BookingCard";
 import SimilarHotels from "../components/SimilarHotels";
+import { useWishlist } from "../context/WishlistContext";
 
 function HotelDetails() {
-
   const { id } = useParams();
 
   const hotel = hotelDetails.find(
-    item => item.id === Number(id)
+    (item) => item.id === Number(id)
   );
 
   const [currentImage, setCurrentImage] = useState(0);
+
+  const {
+    toggleWishlist,
+    isWishlisted,
+  } = useWishlist();
 
   if (!hotel) {
     return <h1>Hotel Not Found</h1>;
   }
 
+  const liked = isWishlisted(hotel.id);
+
   const previousImage = () => {
-    setCurrentImage(prev =>
+    setCurrentImage((prev) =>
       prev === 0
         ? hotel.gallery.length - 1
         : prev - 1
@@ -39,7 +46,7 @@ function HotelDetails() {
   };
 
   const nextImage = () => {
-    setCurrentImage(prev =>
+    setCurrentImage((prev) =>
       prev === hotel.gallery.length - 1
         ? 0
         : prev + 1
@@ -47,7 +54,6 @@ function HotelDetails() {
   };
 
   return (
-
     <div className="hotel-details">
 
       {/* ================= HERO ================= */}
@@ -109,19 +115,20 @@ function HotelDetails() {
 
               <div className="hero-buttons">
 
-               <a
-    href="#booking-card"
-    className="book-btn"
->
-    Book Now
-</a>
+                <a
+                  href="#booking-card"
+                  className="book-btn"
+                >
+                  Book Now
+                </a>
 
-                <button className="wish-btn">
-
+                <button
+                  className={`wish-btn ${liked ? "active" : ""}`}
+                  onClick={() => toggleWishlist(hotel)}
+                >
                   <FaHeart />
 
-                  Wishlist
-
+                  {liked ? "Wishlisted" : "Wishlist"}
                 </button>
 
               </div>
@@ -137,9 +144,9 @@ function HotelDetails() {
       {/* ================= BOOKING CARD ================= */}
 
       <BookingCard
-  hotelId={hotel.id}
-  price={hotel.price}
-/>
+        hotelId={hotel.id}
+        price={hotel.price}
+      />
 
       {/* ================= GALLERY ================= */}
 
@@ -246,9 +253,7 @@ function HotelDetails() {
       <SimilarHotels currentHotelId={hotel.id} />
 
     </div>
-
   );
-
 }
 
 export default HotelDetails;

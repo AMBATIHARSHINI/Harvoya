@@ -407,3 +407,34 @@ font-size:16px;
 }
 
 }
+/* ===========================
+   Compare Button
+=========================== */
+
+.compare-btn{
+    width:100%;
+    margin-top:10px;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:#f1f5f9;
+    color:#334155;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.compare-btn:hover{
+    background:#2563EB;
+    color:white;
+}
+
+.compare-btn.active{
+    background:#16a34a;
+    color:white;
+}
+
+.compare-btn.active:hover{
+    background:#15803d;
+}

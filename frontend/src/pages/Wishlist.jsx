@@ -1,35 +1,14 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaHeart, FaTrash } from "react-icons/fa";
 import "./Wishlist.css";
+import { useWishlist } from "../context/WishlistContext";
 
 function Wishlist() {
 
-  const [wishlist, setWishlist] = useState([]);
-
-  useEffect(() => {
-
-    const savedWishlist =
-      JSON.parse(localStorage.getItem("wishlist")) || [];
-
-    setWishlist(savedWishlist);
-
-  }, []);
-
-  const removeFromWishlist = (id) => {
-
-    const updatedWishlist = wishlist.filter(
-      (hotel) => hotel.id !== id
-    );
-
-    setWishlist(updatedWishlist);
-
-    localStorage.setItem(
-      "wishlist",
-      JSON.stringify(updatedWishlist)
-    );
-
-  };
+  const {
+    wishlist,
+    removeFromWishlist,
+  } = useWishlist();
 
   return (
 
@@ -52,7 +31,10 @@ function Wishlist() {
             Save your favourite hotels to see them here.
           </p>
 
-          <Link to="/" className="browse-btn">
+          <Link
+            to="/"
+            className="browse-btn"
+          >
             Browse Hotels
           </Link>
 
@@ -64,7 +46,10 @@ function Wishlist() {
 
           {wishlist.map((hotel) => (
 
-            <div className="wishlist-card" key={hotel.id}>
+            <div
+              className="wishlist-card"
+              key={hotel.id}
+            >
 
               <img
                 src={hotel.image}
@@ -90,9 +75,7 @@ function Wishlist() {
 
                   <button
                     className="remove-btn"
-                    onClick={() =>
-                      removeFromWishlist(hotel.id)
-                    }
+                    onClick={() => removeFromWishlist(hotel.id)}
                   >
                     <FaTrash />
                   </button>

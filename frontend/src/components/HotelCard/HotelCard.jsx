@@ -7,64 +7,33 @@ import {
   FaSwimmingPool,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useWishlist } from "../../context/WishlistContext";
+import { useCompare } from "../../context/CompareContext";
 
 function HotelCard({ hotel }) {
 
-  const [liked, setLiked] = useState(false);
+  const {
+    toggleWishlist,
+    isWishlisted,
+  } = useWishlist();
 
-  useEffect(() => {
+  const liked = isWishlisted(hotel.id);
 
-    const wishlist =
-      JSON.parse(localStorage.getItem("wishlist")) || [];
+  const {
+    toggleCompare,
+    isCompared,
+  } = useCompare();
 
-    const exists =
-      wishlist.find(item => item.id === hotel.id);
-
-    if (exists) {
-      setLiked(true);
-    }
-
-  }, [hotel.id]);
+  const compared = isCompared(hotel.id);
 
   const handleWishlist = () => {
-
-    let wishlist =
-      JSON.parse(localStorage.getItem("wishlist")) || [];
-
-    const exists =
-      wishlist.find(item => item.id === hotel.id);
-
-    if (exists) {
-
-      wishlist =
-        wishlist.filter(
-          item => item.id !== hotel.id
-        );
-
-      setLiked(false);
-
-    } else {
-
-      wishlist.push(hotel);
-
-      setLiked(true);
-
-    }
-
-    localStorage.setItem(
-      "wishlist",
-      JSON.stringify(wishlist)
-    );
-
+    toggleWishlist(hotel);
   };
 
   return (
-
     <div className="hotel-card">
 
       {/* Hotel Image */}
-
       <div className="hotel-image">
 
         <img
@@ -73,62 +42,44 @@ function HotelCard({ hotel }) {
         />
 
         <div className="hotel-rating">
-
           <FaStar />
-
           <span>{hotel.rating}</span>
-
         </div>
 
         {/* Wishlist */}
-
         <div
           className={`wishlist ${liked ? "active" : ""}`}
           onClick={handleWishlist}
         >
-
           <FaHeart />
-
         </div>
 
       </div>
 
       {/* Hotel Content */}
-
       <div className="hotel-content">
 
         <h3>{hotel.name}</h3>
 
         <p className="location">
-
           <FaMapMarkerAlt />
-
           <span>{hotel.location}</span>
-
         </p>
 
         <span className="hotel-type">
-
           {hotel.type}
-
         </span>
 
         <div className="hotel-features">
 
           <span>
-
             <FaWifi />
-
             Free WiFi
-
           </span>
 
           <span>
-
             <FaSwimmingPool />
-
             Swimming Pool
-
           </span>
 
         </div>
@@ -139,39 +90,35 @@ function HotelCard({ hotel }) {
 
             <small>Starting From</small>
 
-            <h2>
-
-              ${hotel.price}
-
-            </h2>
+            <h2>${hotel.price}</h2>
 
             <p className="per-night">
-
               per night
-
             </p>
 
           </div>
 
         </div>
 
-        {/* View Hotel */}
-
         <Link
           to={`/hotel/${hotel.id}`}
           className="hotel-btn"
         >
-
           View Hotel →
-
         </Link>
+
+        {/* Compare Button */}
+        <button
+          className={`compare-btn ${compared ? "active" : ""}`}
+          onClick={() => toggleCompare(hotel)}
+        >
+          ⚖️ {compared ? "Compared" : "Compare"}
+        </button>
 
       </div>
 
     </div>
-
   );
-
 }
 
 export default HotelCard;

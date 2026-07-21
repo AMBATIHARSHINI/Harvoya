@@ -4,6 +4,10 @@
 
 .booking-section{
 
+    display:block !important;
+
+    width:100%;
+
     max-width:1200px;
 
     margin:110px auto;
@@ -23,6 +27,10 @@
 ================================================== */
 
 .booking-card{
+
+    display:block !important;
+
+    width:100%;
 
     background:rgba(255,255,255,.95);
 
@@ -71,6 +79,8 @@
     display:flex;
 
     flex-direction:column;
+
+    width:100%;
 
     margin-bottom:26px;
 
@@ -186,6 +196,8 @@
 
     align-items:center;
 
+    width:100%;
+
     margin-bottom:28px;
 
 }
@@ -265,6 +277,8 @@
 ================================================== */
 
 .price-summary{
+
+    display:block;
 
     margin-top:35px;
 
@@ -366,13 +380,13 @@
 
 .booking-features{
 
-    margin-top:30px;
-
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
     gap:16px;
+
+    margin-top:30px;
 
 }
 

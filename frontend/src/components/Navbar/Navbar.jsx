@@ -1,49 +1,21 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
-import { useEffect, useState } from "react";
-
+import { useWishlist } from "../../context/WishlistContext";
+import { useCompare } from "../../context/CompareContext";
 function Navbar() {
 
-  const [wishlistCount, setWishlistCount] = useState(0);
-
-  useEffect(() => {
-
-    const updateWishlistCount = () => {
-
-      const wishlist =
-        JSON.parse(localStorage.getItem("wishlist")) || [];
-
-      setWishlistCount(wishlist.length);
-
-    };
-
-    updateWishlistCount();
-
-    window.addEventListener("storage", updateWishlistCount);
-
-    const interval = setInterval(updateWishlistCount, 500);
-
-    return () => {
-
-      window.removeEventListener("storage", updateWishlistCount);
-
-      clearInterval(interval);
-
-    };
-
-  }, []);
+  const { wishlist } = useWishlist();
+  const { compareHotels } = useCompare();
 
   return (
 
     <nav className="navbar">
 
       <div className="logo">
-
         <Link to="/">
           <h2>HARVOYA</h2>
         </Link>
-
       </div>
 
       <ul className="nav-links">
@@ -70,28 +42,38 @@ function Navbar() {
 
           <span>Wishlist</span>
 
-          {wishlistCount > 0 && (
+          {wishlist.length > 0 && (
 
             <span className="wishlist-count">
 
-              {wishlistCount}
+              {wishlist.length}
 
             </span>
 
           )}
 
         </Link>
+         <Link to="/compare" className="compare-nav-btn">
 
+  ⚖️ Compare
+
+  {compareHotels.length > 0 && (
+
+    <span className="compare-count">
+
+      {compareHotels.length}
+
+    </span>
+
+  )}
+
+</Link>
         <button className="login-btn">
-
           Login
-
         </button>
 
         <button className="signup-btn">
-
           Sign Up
-
         </button>
 
       </div>

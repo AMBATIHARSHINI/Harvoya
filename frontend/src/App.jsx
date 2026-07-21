@@ -8,6 +8,7 @@ import BookingSuccess from "./pages/BookingSuccess";
 import MyBookings from "./pages/MyBookings";
 import Receipt from "./pages/Receipt";
 import Wishlist from "./pages/Wishlist";
+import Compare from "./pages/Compare";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Route path="/booking/:id" element={<BookingPage />} />
 
       <Route path="/payment/:id" element={<PaymentPage />} />
-
+      <Route path="/compare" element={<Compare />} />
       <Route
         path="/booking-success"
         element={<BookingSuccess />}

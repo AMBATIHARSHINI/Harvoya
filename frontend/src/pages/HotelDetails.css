@@ -525,6 +525,15 @@ grid-template-columns:repeat(2,1fr);
 }
 
 }
+.wish-btn.active {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+}
+
+.wish-btn.active:hover {
+  background: #ff3030;
+}
 
 @media(max-width:768px){
 
