@@ -1,5 +1,5 @@
 import "./TripResult.css";
-
+import downloadTripPDF from "../../utils/pdfGenerator";
 const destinationImages = {
   Bali:
     "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=1200",
@@ -128,6 +128,14 @@ function TripResult({ trip }) {
     </>
   )}
 
+</div>
+<div className="download-section">
+  <button
+    className="download-btn"
+    onClick={() => downloadTripPDF(trip)}
+  >
+    📄 Download Trip PDF
+  </button>
 </div>
     </div>
   );
