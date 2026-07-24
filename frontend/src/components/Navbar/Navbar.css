@@ -243,3 +243,16 @@
     justify-content:center;
     font-weight:700;
 }
+.ai-planner-btn{
+    text-decoration:none;
+    background:#6c63ff;
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.ai-planner-btn:hover{
+    background:#4d44db;
+}

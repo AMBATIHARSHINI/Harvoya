@@ -1,0 +1,124 @@
+.trip-result{
+    max-width:1100px;
+    margin:40px auto;
+}
+
+.trip-hero{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.trip-hero img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.trip-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.trip-overlay h1{
+    font-size:42px;
+}
+
+.budget-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.budget-item{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.total-card{
+    margin-top:25px;
+    background:#2563eb;
+    color:white;
+    padding:18px;
+    border-radius:12px;
+    font-size:22px;
+    text-align:center;
+}
+
+.timeline{
+    margin-top:40px;
+}
+
+.timeline-item{
+    display:flex;
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.circle{
+    width:50px;
+    height:50px;
+    background:#2563eb;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.timeline-content{
+    background:white;
+    flex:1;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.hotel-card{
+    margin-top:40px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.hotel-card button{
+    margin-top:20px;
+    padding:12px 28px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+.recommended-hotel-img{
+    width:100%;
+    max-width:500px;
+    height:280px;
+    object-fit:cover;
+    border-radius:15px;
+    margin:20px auto;
+    display:block;
+}
+
+.hotel-card h3{
+    margin-top:15px;
+    font-size:28px;
+}
+
+.hotel-card p{
+    margin:10px 0;
+    font-size:18px;
+}

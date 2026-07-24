@@ -68,6 +68,9 @@ function Navbar() {
   )}
 
 </Link>
+<Link to="/ai-planner" className="ai-planner-btn">
+  🤖 AI Planner
+</Link>
         <button className="login-btn">
           Login
         </button>
